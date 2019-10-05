@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body background="assets/images/rocky-background.jpg">
+    <!-- start of h tag section -->
+    <section>
+        <h1>Cystals Collector!</h1>
+    </section>
+    <!-- end of h tag section -->
+    <!-- rules section -->
+    <section id="rulesSection">
+        <p>You will be given a random runmber at the start of the game</p>
+        <br>
+        <p>There are 4 crystals below. By clicking on a crystal you will add a specific amount of poinbts to your total score</p>
+        <br>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number</p>
+        <br>
+        <p>The value of each crystal is hidden from you until you click on it</p>
+        <br>
+        <p>Each time when the game starts, the game will change the value of each crystal</p>
+    </section>
+    <!-- start of random number div -->
+    
+    <div id="randomNumberWinsLosses">
+        <div id="randomNumberDiv">
+            <p id="randomNumber-Text"></p>
+        </div>
+        <!-- end of random number div -->
+        <!-- start of results sections -->
+        <div id="resultsDiv">
+            <div>
+                <p id="winOrLoss-Text"></p>
+            </div> 
+            <div>
+                <p>Wins: </p>
+                <p id="wins-Text"></p>
+            </div>
+            <div>
+                <p>Losses: </p>
+                <p id="losses-Text"></p>
+            </div>
+        </div>
+    </div>
+    <!-- end of results section -->
+    <!-- start of crystals section -->
+    <div id="imagesDiv">
+        <img src="assets/images/red-crystal.jpg" id="redCrystal">
+        <img src="assets/images/blue-crystal.jpg" id="blueCrystal">
+        <img src="assets/images/yellow-crystal.jpg" id="yellowCrystal">
+        <img src="assets/images/green-crystal.jpg" id="greenCrystal">
+    </div>
+    <!-- end of crystals section -->
+    <!-- start of your score div -->
+    <div id="yourScoreDiv">
+        <div>
+            <p>Your total score is: </p>  
+            <p id="yourTotalScore-Text"></p>
+        </div>
+        <!-- <div id="yourScoreBox">
+            <p id="yourTotalScore-Text"></p>
+        </div> -->
+    </div>
+    <!-- end of your score div -->
+</body>
+</html>
