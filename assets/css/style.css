@@ -64,3 +64,8 @@ img {
     height: 50px;
 } 
 
+/* @media screen and (max-width: 1500px) {
+    #randomNumberWingsLosses {
+        width: 100%;
+    }
+   } */
