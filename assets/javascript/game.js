@@ -3,23 +3,64 @@ $(document).ready(function(){
         var wins = 0;
         var losses = 0;
         var totalScore = 0;
-        var computerGuess = Math.floor(Math.random() * 100) + 100;
+        
+        var computerGuess = Math.floor(Math.random() * 20) + 1;
         console.log(computerGuess);
-        // $(".crystals").on("click", function() {
-        //     console.log("it works");
-        // });
-// start of functions
+
+        // start of functions
+        function randomINT () {
+                return Math.floor(Math.random() * 5);
+        }
+
+        function checkWinOrLoss () {
+                if (totalScore == computerGuess) {
+                        wins = wins + 1;
+                        $("#wins-Text").html(wins);
+                        $("#winOrLoss-Text").html("You win!!!");
+                        computerGuess = Math.floor(Math.random() * 20) + 1;
+                        $("#randomNumber-Text").html(computerGuess);
+                        totalScore = 0;
+                }
+                if (totalScore > computerGuess) {
+                        losses = losses + 1;
+                        $("#losses-Text").html(losses);
+                        $("#winOrLoss-Text").html("You lose!!!");
+                        computerGuess = Math.floor(Math.random() * 20) + 1;
+                        $("#randomNumber-Text").html(computerGuess);
+                        totalScore = 0;
+                }
+        }
+
+        var redCrystal = randomINT();
+        var blueCrystal = randomINT();
+        var yellowCrystal = randomINT();
+        var greenCrystal = randomINT();
+
         $("#redCrystal").click(function() {
-        console.log("its working!");
+                totalScore = redCrystal + totalScore;
+                $("#yourTotalScore-Text").html(totalScore);
+                checkWinOrLoss();
         });
+
         $("#blueCrystal").click(function() {
-        console.log("its working!!");
+                totalScore = blueCrystal + totalScore;
+                $("#yourTotalScore-Text").html(totalScore);
+                checkWinOrLoss();
         });
+
         $("#yellowCrystal").click(function() {
-        console.log("its working!!!");
+                totalScore = yellowCrystal + totalScore;
+                $("#yourTotalScore-Text").html(totalScore);
+                checkWinOrLoss();
         });
+
         $("#greenCrystal").click(function() {
-        console.log("its working!!!!");
+                totalScore = greenCrystal + totalScore;
+                $("#yourTotalScore-Text").html(totalScore);
+                checkWinOrLoss();
         });
+
+        $("#randomNumber-Text").html(computerGuess);
+
 }
 )

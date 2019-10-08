@@ -30,6 +30,10 @@ h1 {
     width: 40%;
     float: left;
     height: 50px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
 }
 
 #resultsDiv {
