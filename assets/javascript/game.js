@@ -17,7 +17,7 @@ $(document).ready(function(){
                         wins = wins + 1;
                         $("#wins-Text").html(wins);
                         $("#winOrLoss-Text").html("You win!!!");
-                        computerGuess = Math.floor(Math.random() * 20) + 1;
+                        computerGuess = Math.floor(Math.random() * 101) + 19;
                         $("#randomNumber-Text").html(computerGuess);
                         totalScore = 0;
                 }
@@ -25,7 +25,7 @@ $(document).ready(function(){
                         losses = losses + 1;
                         $("#losses-Text").html(losses);
                         $("#winOrLoss-Text").html("You lose!!!");
-                        computerGuess = Math.floor(Math.random() * 20) + 1;
+                        computerGuess = Math.floor(Math.random() * 101) + 19;
                         $("#randomNumber-Text").html(computerGuess);
                         totalScore = 0;
                 }
