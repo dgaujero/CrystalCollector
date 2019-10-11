@@ -4,12 +4,12 @@ $(document).ready(function(){
         var losses = 0;
         var totalScore = 0;
         
-        var computerGuess = Math.floor(Math.random() * 20) + 1;
+        var computerGuess = Math.floor(Math.random() * 121) + 19;
         console.log(computerGuess);
 
         // start of functions
         function randomINT () {
-                return Math.floor(Math.random() * 5);
+                return Math.floor(Math.random() * 12) + 1;
         }
 
         function checkWinOrLoss () {
