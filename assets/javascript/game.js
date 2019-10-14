@@ -5,7 +5,7 @@ $(document).ready(function(){
         var totalScore = 0;
         
         var computerGuess = Math.floor(Math.random() * 101) + 19;
-        console.log(computerGuess);
+        // console.log(computerGuess);
 
         // start of functions
         function randomINT () {
